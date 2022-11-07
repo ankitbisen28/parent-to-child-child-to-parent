@@ -1,0 +1,16 @@
+<div class="container my-5">
+    <div class="h3">Child Component</div>
+  <div class="input-group input-group-lg">
+    <span class="input-group-text" id="inputGroup-sizing-lg">Child Value</span>
+    <input
+      type="text"
+      #childInput
+      class="form-control"
+      aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-lg"
+    />
+    <button class="btn btn-danger" (click)="addNewItem(childInput.value)" type="button">To Parent</button>
+  </div>
+  <p class="text-success fs-4 text-center my-3">Result</p>
+  <p class="text-center my-1 fs-3" id="child-result">{{value}}</p>
+</div>

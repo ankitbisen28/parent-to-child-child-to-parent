@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="h3">Parent Component</div>
+  <div class="input-group input-group-lg">
+    <span class="input-group-text" id="inputGroup-sizing-lg">Parent value</span>
+    <input
+      type="text"
+      #parentval
+      class="form-control"
+      aria-label="Sizing example input"
+      aria-describedby="inputGroup-sizing-lg"
+    />
+    <div class="btn btn-danger" (click)="getvalue(parentval.value)">To Child</div>
+  </div>
+  <p class="text-success fs-4 text-center my-3">Result</p>
+  <p class="text-center my-1 fs-3 mb-4" id="parent-result">{{childValue}}</p>
+</div>
+<app-child-component [value]="parentValue" (newItemEvent)="addItem($event)"></app-child-component>
